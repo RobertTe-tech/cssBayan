@@ -19,11 +19,13 @@ div:hover .mem:active {
     color: #23851a;
 }
 
+div:hover .mem:not(active) {}
+
 .mem {
     margin: 0;
     text-decoration: none;
     max-width: max-content;
-    min-width: 70vw;
+    width: 70vw;
     color: #23851a;
     text-align: left;
 }
@@ -41,8 +43,7 @@ h3::after {
     background-color: #23851a;
 }
 
-.mem:active img {
-    transition-duration: 1s;
+.mem:hover img {
     display: block;
     margin: 0 auto;
 }
