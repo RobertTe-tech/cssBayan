@@ -9,7 +9,7 @@ body {
 }
 
 div {
-    margin: 5% auto;
+    margin: 5vh auto;
     font-size: 2vh;
 }
 
@@ -39,11 +39,13 @@ h3 {
 }
 
 i {
-    content: "";
     display: inline-block;
     width: 1rem;
     height: 1rem;
-    background-color: #23851a;
+}
+
+div:hover i {
+    background-color: #13886b;
 }
 
 .mem:hover img {
