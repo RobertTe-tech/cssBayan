@@ -24,26 +24,29 @@ div:hover .mem:active {
 
 .mem {
     margin: 0;
-    width: ;
     color: #23851a;
 }
 
 img {
     pointer-events: none;
     display: none;
+    margin: 0 auto;
 }
 
-h3::after {
-    max-width: 90%;
+h3 {
+    width: 50vw;
+    display: inline-block;
+}
+
+i {
     content: "";
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 1rem;
+    height: 1rem;
     background-color: #23851a;
 }
 
 .mem:hover img {
     width: 30vh;
     display: block;
-    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
