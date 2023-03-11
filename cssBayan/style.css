@@ -5,6 +5,7 @@ body {
     display: flex;
     flex-direction: column;
     -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 div {
@@ -23,7 +24,7 @@ div:hover .mem:active {
 
 .mem {
     margin: 0;
-    width: 70vw;
+    width: ;
     color: #23851a;
 }
 
@@ -33,6 +34,7 @@ img {
 }
 
 h3::after {
+    max-width: 90%;
     content: "";
     display: inline-block;
     width: 15px;
@@ -43,4 +45,5 @@ h3::after {
 .mem:hover img {
     width: 30vh;
     display: block;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
