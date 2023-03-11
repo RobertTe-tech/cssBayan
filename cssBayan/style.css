@@ -2,13 +2,14 @@ body {
     background: #f2f7dc;
     font-size: 1em;
     overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    -webkit-user-select: none;
 }
 
 div {
-    width: 70vh;
-    margin: 10% auto;
+    margin: 5% auto;
     font-size: 2vh;
-    -webkit-user-select: none;
 }
 
 div:hover .mem {
@@ -22,11 +23,8 @@ div:hover .mem:active {
 
 .mem {
     margin: 0;
-    text-decoration: none;
-    max-width: max-content;
     width: 70vw;
     color: #23851a;
-    text-align: left;
 }
 
 img {
