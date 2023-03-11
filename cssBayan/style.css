@@ -1,0 +1,48 @@
+body {
+    background: #f2f7dc;
+    font-size: 1.5em;
+}
+
+div {
+    width: 70vh;
+    margin: 10% auto;
+    font-size: 3vh;
+    -webkit-user-select: none;
+}
+
+div:hover .mem {
+    color: #000;
+    cursor: pointer;
+}
+
+div:hover .mem:active {
+    color: #23851a;
+}
+
+.mem {
+    margin: 0;
+    text-decoration: none;
+    max-width: max-content;
+    min-width: 70vw;
+    color: #23851a;
+    text-align: left;
+}
+
+img {
+    display: none;
+}
+
+h3::after {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #23851a;
+}
+
+.mem:active img {
+    transition-duration: 1s;
+    width: 50vw;
+    display: block;
+    margin: 0 auto;
+}
