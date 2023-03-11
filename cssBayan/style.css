@@ -29,6 +29,7 @@ div:hover .mem:active {
 }
 
 img {
+    pointer-events: none;
     display: none;
 }
 
@@ -42,7 +43,6 @@ h3::after {
 
 .mem:active img {
     transition-duration: 1s;
-    width: 50vw;
     display: block;
     margin: 0 auto;
 }
