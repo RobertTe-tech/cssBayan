@@ -1,9 +1,3 @@
-@media (hover: none) {
-    body:hover {
-        color: inherit;
-    }
-}
-
 @media (orientation:portrait) {
     body {
         font-size: 2vw;
@@ -12,7 +6,7 @@
         width: 50vw;
     }
     .mem:hover img {
-        width: 50vw;
+        /*width: 40vw;*/
     }
 }
 
@@ -24,7 +18,7 @@
         width: 50vh;
     }
     .mem:hover img {
-        width: 30vh;
+        /*width: 30vh;*/
     }
 }
 
@@ -40,6 +34,10 @@ body {
 div {
     margin: 5vh auto;
     /*font-size: 2vh;*/
+}
+
+label {
+    display: block;
 }
 
 div:hover .mem {
@@ -69,16 +67,26 @@ h3 {
     display: inline-block;
 }
 
-i::after {
-    content: "\2686";
-    font-size: 1rem;
-}
-
 .mem:hover img {
-    /*width: 30vh;*/
+    width: 30vh;
     transform: scale(1);
 }
 
-.mem:hover i::after {
-    content: "\2687";
+.mem:focus {
+    width: 30vh;
 }
+
+input[type="radio"] {
+    visibility: hidden;
+}
+
+input[type="radio"]:checked:not(hover)+h3 {
+    color: #aaa;
+}
+
+input[type="radio"]:checked+img {
+    width: 30vh;
+    transform: scale(1);
+}
+
+@media (hover: none) {}
