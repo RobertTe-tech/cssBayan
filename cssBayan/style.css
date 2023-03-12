@@ -5,9 +5,6 @@
     h3 {
         width: 50vw;
     }
-    .mem:hover img {
-        /*width: 40vw;*/
-    }
 }
 
 @media (orientation:landscape) {
@@ -17,14 +14,11 @@
     h3 {
         width: 50vh;
     }
-    .mem:hover img {
-        /*width: 30vh;*/
-    }
 }
 
 body {
     background: #f2f7dc;
-    overflow-y: hidden;
+    scrollbar-gutter: stable both;
     display: flex;
     flex-direction: column;
     -webkit-user-select: none;
@@ -40,21 +34,12 @@ label {
     display: block;
 }
 
-div:hover .mem {
-    color: #000;
-    cursor: pointer;
-}
-
-div:hover .mem:active {
-    color: #23851a;
-}
-
 .mem {
     margin: 0;
     color: #23851a;
 }
 
-img {
+.pop-up {
     pointer-events: none;
     display: flex;
     width: 0;
@@ -67,26 +52,39 @@ h3 {
     display: inline-block;
 }
 
-.mem:hover img {
-    width: 30vh;
-    transform: scale(1);
-}
-
-.mem:focus {
-    width: 30vh;
+i {
+    display: inline-block;
+    visibility: hidden;
 }
 
 input[type="radio"] {
     visibility: hidden;
 }
 
-input[type="radio"]:checked:not(hover)+h3 {
-    color: #aaa;
-}
-
-input[type="radio"]:checked+img {
+input[type="radio"]:checked~.pop-up {
     width: 30vh;
     transform: scale(1);
 }
 
+input[type="radio"]:checked~i {
+    visibility: visible;
+}
+
 @media (hover: none) {}
+
+@media (hover: hover) {
+    div:hover .mem {
+        color: #000;
+        cursor: pointer;
+    }
+    div:hover i {
+        visibility: visible;
+    }
+    div:hover .mem:active {
+        color: #23851a;
+    }
+    .mem:hover .pop-up {
+        width: 30vh;
+        transform: scale(1);
+    }
+}
