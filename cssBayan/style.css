@@ -1,6 +1,35 @@
+@media (hover: none) {
+    body:hover {
+        color: inherit;
+    }
+}
+
+@media (orientation:portrait) {
+    body {
+        font-size: 2vw;
+    }
+    h3 {
+        width: 50vw;
+    }
+    .mem:hover img {
+        width: 50vw;
+    }
+}
+
+@media (orientation:landscape) {
+    body {
+        font-size: 2vh;
+    }
+    h3 {
+        width: 50vh;
+    }
+    .mem:hover img {
+        width: 30vh;
+    }
+}
+
 body {
     background: #f2f7dc;
-    font-size: 1em;
     overflow-y: hidden;
     display: flex;
     flex-direction: column;
@@ -10,7 +39,7 @@ body {
 
 div {
     margin: 5vh auto;
-    font-size: 2vh;
+    /*font-size: 2vh;*/
 }
 
 div:hover .mem {
@@ -36,18 +65,17 @@ img {
 }
 
 h3 {
-    width: 50vw;
+    /*width: 50vw;*/
     display: inline-block;
 }
 
 i::after {
     content: "\2686";
-    font-size: 2rem;
-    transition: 1s;
+    font-size: 1rem;
 }
 
 .mem:hover img {
-    width: 30vh;
+    /*width: 30vh;*/
     transform: scale(1);
 }
 
