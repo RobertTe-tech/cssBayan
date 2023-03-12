@@ -1,23 +1,23 @@
 @media (orientation:portrait) {
     body {
-        font-size: 2vw;
+        font-size: 4vw;
     }
     h3 {
-        width: 50vw;
+        width: 70vw;
     }
 }
 
 @media (orientation:landscape) {
     body {
-        font-size: 2vh;
+        font-size: 4vh;
     }
     h3 {
-        width: 50vh;
+        width: 70vh;
     }
 }
 
 body {
-    background: #f2f7dc;
+    background: #faffe5;
     scrollbar-gutter: stable both;
     display: flex;
     flex-direction: column;
@@ -36,7 +36,7 @@ label {
 
 .mem {
     margin: 0;
-    color: #23851a;
+    color: #219903;
 }
 
 .pop-up {
@@ -55,36 +55,43 @@ h3 {
 i {
     display: inline-block;
     visibility: hidden;
+    transform: rotate(90deg);
+    transition: 1s;
 }
 
-input[type="radio"] {
+input {
     visibility: hidden;
+    display: none;
 }
 
-input[type="radio"]:checked~.pop-up {
+input:checked~.pop-up {
     width: 30vh;
     transform: scale(1);
 }
 
-input[type="radio"]:checked~i {
-    visibility: visible;
+input:checked~h3 {
+    color: #000;
 }
 
 @media (hover: none) {}
 
 @media (hover: hover) {
     div:hover .mem {
-        color: #000;
         cursor: pointer;
+        color: #000;
     }
     div:hover i {
         visibility: visible;
     }
     div:hover .mem:active {
-        color: #23851a;
+        opacity: 0.5;
+        color: #219903;
     }
     .mem:hover .pop-up {
         width: 30vh;
         transform: scale(1);
+    }
+    div:hover input:checked~i {
+        transform: rotate(180deg);
     }
 }
