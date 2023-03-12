@@ -1,0 +1,105 @@
+@media (orientation:portrait) {
+    body {
+        font-size: 4vw;
+    }
+    h3 {
+        width: 70vw;
+    }
+}
+
+@media (orientation:landscape) {
+    body {
+        font-size: 4vh;
+    }
+    h3 {
+        width: 70vh;
+    }
+}
+
+body {
+    background: #faffe5;
+    scrollbar-gutter: stable both;
+    display: flex;
+    flex-direction: column;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+div {
+    margin: 5vh auto;
+    /*font-size: 2vh;*/
+}
+
+label {
+    display: block;
+}
+
+.mem {
+    margin: 0;
+    color: #219903;
+}
+
+.pop-up {
+    pointer-events: none;
+    display: flex;
+    width: 0;
+    margin: 0 auto;
+    transition: 1s;
+}
+
+h3 {
+    /*width: 50vw;*/
+    display: inline-block;
+}
+
+i {
+    display: inline-block;
+    visibility: hidden;
+    transform: rotate(90deg);
+    transition: 1s;
+}
+
+input {
+    visibility: hidden;
+    display: none;
+}
+
+input:checked~.pop-up {
+    width: 30vh;
+    transform: scale(1);
+}
+
+input:checked~h3 {
+    color: #000;
+}
+
+@media (hover: none) {
+    div i {
+        visibility: visible;
+    }
+    input:checked~i {
+        transform: rotate(180deg);
+        color: #000;
+    }
+}
+
+@media (hover: hover) {
+    div:hover .mem {
+        cursor: pointer;
+        color: #000;
+    }
+    div:hover i {
+        visibility: visible;
+    }
+    div:hover .mem:active {
+        opacity: 0.5;
+        color: #219903;
+    }
+    .mem:hover .pop-up {
+        width: 30vh;
+        transform: scale(1);
+    }
+    div:hover input:checked~i {
+        transform: rotate(180deg);
+    }
+}
